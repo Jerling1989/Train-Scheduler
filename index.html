@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Thomas' Train Scheduler</title>
+
+	<!-- RESET CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+	<!-- BOOTSTRAP CDN -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- UNIQUE STYLESHEET -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<!-- JQUERY CDN -->
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+	<!-- FIREBASE DB -->
+	<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+
+	<!-- MOMENT.JS -->
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+</head>
+
+<body id="body">
+
+<div class="row text-center" id="banner">
+	<div class="col-md-2">
+		<img class="banner-img" src="assets/images/thomas_banner.jpg">
+	</div>
+	
+	<div class="col-md-8">
+		<h1>THOMAS THE TANK ENGINE'S</h1>
+		<h1>BOSS A$$ TRAIN SCHEDULER</h1>
+	</div>
+
+	<div class="col-md-2">
+		<img class="banner-img" src="assets/images/thomas_banner.jpg">
+	</div>
+</div>
+
+<br>
+
+<div class="row">
+	<div class="col-md-2"></div>
+	
+	<div class="col-md-8">
+		<div class="panel panel-primary">
+		  <div class="panel-heading text-center">
+		    <h3 class="panel-title">THOMAS' CURRENT SCHEDULE</h3>
+		  </div>
+		  <div class="panel-body">
+		    <table class="table table-striped">
+		    	<thead>
+					  <th>Train Name</th>
+					  <th>Train Destination</th>
+					  <th>Frequency(min)</th>
+					  <th>Next Arrival</th>
+					  <th>Minutes Away</th>
+				  </thead>
+				  <tbody>
+				  	<tr>
+				  		<td>Thomas</td>
+				  		<td>NYC</td>
+				  		<td>36</td>
+				  		<td>7:30pm</td>
+				  		<td>18</td>
+				  	</tr>
+				  	<tr>
+				  		<td>Thomas</td>
+				  		<td>NYC</td>
+				  		<td>36</td>
+				  		<td>7:30pm</td>
+				  		<td>18</td>
+				  	</tr>
+				  	<tr>
+				  		<td>Thomas</td>
+				  		<td>NYC</td>
+				  		<td>36</td>
+				  		<td>7:30pm</td>
+				  		<td>18</td>
+				  	</tr>
+				  </tbody>
+				</table>
+		  </div>
+		</div>
+	</div>
+
+	<div class="col-md-2"></div>
+</div>
+
+
+<div class="row">
+	<div class="col-md-2"></div>
+	
+	<div class="col-md-8">
+		<div class="panel panel-primary">
+		  <div class="panel-heading text-center">
+		    <h3 class="panel-title">ADD A TRAIN (THOMAS CAN HANDLE IT)</h3>
+		  </div>
+		  <div class="panel-body">
+				<form role="form">
+
+					<div class="form-group">
+						<label>Train Name</label>
+						<input type="text" name="train-name" id="train-name" class="form-control" required>
+					</div>
+
+					<div class="form-group">
+						<label>Destination</label>
+						<input type="text" name="destination" id="destination" class="form-control" required>
+					</div>
+
+					<div class="form-group">
+						<label>First Train Time (HH:mm - Military Time)</label>
+						<input type="time" name="train-time" id="train-time" class="form-control" required>
+					</div>
+
+					<div class="form-group">
+						<label>Frquency(minutes)</label>
+						<input type="number" name="frequency" id="frequency" class="form-control" required>
+					</div>
+
+					<button type="submit" class="btn btn-primary" id="submit">SUBMIT THAT ISH</button>
+
+				</form>
+		  </div>
+		</div>
+	</div>
+
+	<div class="col-md-2"></div>
+</div>
+
+
+
+</body>
+</html>

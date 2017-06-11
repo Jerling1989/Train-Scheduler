@@ -1,0 +1,21 @@
+
+#body {
+	background-image: url(../images/train_bg.jpg);
+	background-size: 100%;
+	height: auto;
+}
+
+#banner {
+	position: relative;
+	height: 10%;
+	background-color: black;
+}
+
+.banner-img {
+	width: 100%;
+	height: auto;
+}
+
+h1 {
+	color: white;
+}
