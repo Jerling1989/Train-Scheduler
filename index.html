@@ -12,6 +12,9 @@
 	<!-- UNIQUE STYLESHEET -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Mogra" rel="stylesheet">
+
 	<!-- JQUERY CDN -->
 	<script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -63,27 +66,7 @@
 					  <th>Minutes Away</th>
 				  </thead>
 				  <tbody>
-				  	<tr>
-				  		<td>Thomas</td>
-				  		<td>NYC</td>
-				  		<td>36</td>
-				  		<td>7:30pm</td>
-				  		<td>18</td>
-				  	</tr>
-				  	<tr>
-				  		<td>Thomas</td>
-				  		<td>NYC</td>
-				  		<td>36</td>
-				  		<td>7:30pm</td>
-				  		<td>18</td>
-				  	</tr>
-				  	<tr>
-				  		<td>Thomas</td>
-				  		<td>NYC</td>
-				  		<td>36</td>
-				  		<td>7:30pm</td>
-				  		<td>18</td>
-				  	</tr>
+					<!-- DATABASE -->
 				  </tbody>
 				</table>
 		  </div>
@@ -103,25 +86,22 @@
 		    <h3 class="panel-title">ADD A TRAIN (THOMAS CAN HANDLE IT)</h3>
 		  </div>
 		  <div class="panel-body">
-				<form role="form">
+				<form role="form" id="train-form">
 
 					<div class="form-group">
 						<label>Train Name</label>
 						<input type="text" name="train-name" id="train-name" class="form-control" required>
 					</div>
-
 					<div class="form-group">
 						<label>Destination</label>
 						<input type="text" name="destination" id="destination" class="form-control" required>
 					</div>
-
 					<div class="form-group">
-						<label>First Train Time (HH:mm - Military Time)</label>
+						<label>First Train Time (HH:MM - Specify AM or PM!... Thomas Knows Where You Sleep)</label>
 						<input type="time" name="train-time" id="train-time" class="form-control" required>
 					</div>
-
 					<div class="form-group">
-						<label>Frquency(minutes)</label>
+						<label>Frequency (MIN)</label>
 						<input type="number" name="frequency" id="frequency" class="form-control" required>
 					</div>
 
@@ -136,6 +116,6 @@
 </div>
 
 
-
+<script type="text/javascript" src="assets/javascript/train.js"></script>
 </body>
 </html>
