@@ -1,4 +1,4 @@
-// Create Variables Needed For Program
+// CREATE VARIABLES NEEDED FOR PROGRAM
 var trainName = "";
 var destination = "";
 var frequency = 0;
@@ -10,7 +10,7 @@ var remainder;
 var minutesLeft;
 var nextTrainTime;
 
-// Initialize Firebase
+// INITIALIZE FIREBASE
 var config = {
   apiKey: "AIzaSyDjAgBODS-gIWYJ1eC9az38jQ87N1s5GkU",
   authDomain: "train-scheduler-cc76d.firebaseapp.com",
@@ -23,11 +23,11 @@ firebase.initializeApp(config);
 
 var database = firebase.database();
 
-// Create On Click Event When User Submits Form Info
+// CREATE ON CLICK EVENT WHEN USER SUBMITS FORM INFO
 $('#submit').on('click', function(event) {
   event.preventDefault();
 
-  // Store User Inputs into Appropriately Named Variables
+  // STORE USER INPUTS INTO APPROPRIATELY NAMED VARIABLES
   trainName= $("#train-name").val().trim();
   destination= $("#destination").val().trim();
   frequency= $("#frequency").val().trim();
@@ -38,35 +38,35 @@ $('#submit').on('click', function(event) {
   console.log(frequency);
   console.log(time);
 
-  // Subtract 1 Year From time to Make Sure it's Before Current Time
+  // SUBTRACT 1 YEAR FROM TIME TO MAKE SURE IT'S BEFORE CURRENT TIME
   convertedTime= moment(time, "hh:mm").subtract("1, years");
   console.log(convertedTime);
 
-  // Store Current Time into Variable
+  // STORE CURRENT TIME INTO VARIABLE
   currentTime = moment();
   console.log(currentTime);
 
-  // Get the Difference Between Our Current Time and ConvertedTime
+  // GET THE DIFFERENCE BETWEEN OUR CURRENT TIME AND CONVERTEDTIME
   timeDifference = currentTime.diff(moment(convertedTime), "minutes");
   console.log(timeDifference);
 
-  // Calculate minutesLeft by Getting the Remainder(modulas) of timeDifference and frequency
-  // And Subtractind it From the frequency
+  // CALCULATE MINUTESLEFT BY GETTING THE REMAINDER(MODULAS) OF TIMEDIFFERENCE AND FREQUENCY
+  // AND SUBTRACT IT FROM THE FREQUENCY
   remainder = timeDifference % frequency;
   minutesLeft = frequency - remainder;
   console.log(minutesLeft);
 
-  // Calculate Next Train Arrival by Adding minutesLeft to CurrentTime
+  // CALCULATE NEXT TRAIN ARRIVAL BY ADDING MINUTESLEFT TO CURRENTTIME
   nextTrainTime = moment().add(minutesLeft, "minutes").format("hh:mm a");
   console.log(nextTrainTime);
 
-  // Clear Form Values
+  // CLEAR FORM VALUES
   $("#train-name").val("");
   $("#destination").val("");
   $("#frequency").val("");
   $("#train-time").val("");
 
-  // Push Form Values That We Stored Inside Variables into the Database(firebase)
+  // PUSH FORM VALUES THAT WE STORED INSIDE VARIABLES INTO THE DATABASE(FIREBASE)
   database.ref().push ({
       trainName: trainName,
       destination: destination,
@@ -77,18 +77,18 @@ $('#submit').on('click', function(event) {
 
 });
 
-// Put The Values Stored in Our Database into the HTML Data Table
+// PUT THE VALUES STORED IN OUR DATABASE INTO THE HTML DATA TABLE
 database.ref().on("child_added", function(snapshot){
   console.log(snapshot.val());
 
-  // Create New Table Row
+  // CREATE NEW TABLE ROW
   var row= $("<tr>");
 
-  // Add Values From Database to Table Row
+  // ADD VALUES FROM DATABASE TO TABLE ROW
   var data= $("<td>" +snapshot.val().trainName + "</td><td>" +snapshot.val().destination + "</td><td>" +snapshot.val().frequency + "</td><td>" +snapshot.val().nextTrainTime + "</td><td>" +snapshot.val().minutesLeft + "</td>");
   row.append(data)
 
-  // Add Table Row to Table Body
+  // ADD TABLE ROW TO TABLE BODY
   $("tbody").append(row);
 
 });
