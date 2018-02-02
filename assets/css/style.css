@@ -1,10 +1,19 @@
-
+/* GENERAL STYLES */
 #body {
 	background-image: url(../images/train_bg.jpg);
 	background-size: 100%;
 	height: auto;
 }
 
+h1 {
+	color: white;
+	font-family: 'Mogra', cursive;
+	font-size: 60px;
+	line-height: 40px
+}
+
+
+/* HEADER STYLES */
 #banner {
 	position: relative;
 	height: 10%;
@@ -14,11 +23,4 @@
 .banner-img {
 	width: 100%;
 	height: auto;
-}
-
-h1 {
-	color: white;
-	font-family: 'Mogra', cursive;
-	font-size: 60px;
-	line-height: 40px
 }
