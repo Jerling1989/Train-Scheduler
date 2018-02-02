@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
+	<!-- PAGE TITLE -->
 	<title>Thomas' Train Scheduler</title>
 
 	<!-- RESET CSS -->
@@ -34,31 +35,46 @@
 
 <body id="body">
 
+<!-- PAGE HEADER -->
 <div class="row text-center" id="banner">
-	<div class="col-md-2">
+	<!-- THOMAS PIC -->
+	<div class="col-md-2 col-sm-2">
 		<img class="banner-img" src="assets/images/thomas_banner.jpg">
 	</div>
+	<!-- END THOMAS PIC -->
 	
-	<div class="col-md-8">
+	<!-- APP NAME -->
+	<div class="col-md-8 col-sm-8">
 		<h1>THOMAS THE TANK ENGINE'S</h1>
 		<h1>BOSS A$$ TRAIN SCHEDULER</h1>
 	</div>
+	<!-- END APP NAME -->
 
-	<div class="col-md-2">
+	<!-- THOMAS PIC -->
+	<div class="col-md-2 col-sm-2">
 		<img class="banner-img" src="assets/images/thomas_banner.jpg">
 	</div>
+	<!-- END THOMAS PIC -->
 </div>
+<!-- END PAGE HEADER -->
 
 <br>
 
+<!-- TRAIN SCHEDULE DISPLAY -->
 <div class="row">
+	<!-- MARGIN -->
 	<div class="col-md-2"></div>
 	
+	<!-- PANEL -->
 	<div class="col-md-8">
 		<div class="panel panel-primary">
+			<!-- PANEL TITLE -->
 		  <div class="panel-heading text-center">
 		    <h3 class="panel-title">THOMAS' CURRENT SCHEDULE</h3>
 		  </div>
+		  <!-- END PANEL TITLE -->
+
+		  <!-- PANEL BODY -->
 		  <div class="panel-body">
 		    <table class="table table-striped">
 		    	<thead>
@@ -73,52 +89,77 @@
 				  </tbody>
 				</table>
 		  </div>
+		  <!-- END PANEL BODY -->
 		</div>
 	</div>
+	<!-- END PANEL -->
 
+	<!-- MARGIN -->
 	<div class="col-md-2"></div>
 </div>
+<!-- END TRAIN SCHEDULE DISPLAY -->
 
 
+<!-- NEW TRAIN FORM CONTAINER -->
 <div class="row">
+	<!-- MARGIN -->
 	<div class="col-md-2"></div>
 	
+	<!-- PANEL -->
 	<div class="col-md-8">
 		<div class="panel panel-primary">
+			<!-- PANEL TITLE -->
 		  <div class="panel-heading text-center">
 		    <h3 class="panel-title">ADD A TRAIN (THOMAS CAN HANDLE IT)</h3>
 		  </div>
-		  <div class="panel-body">
-				<form role="form" id="train-form">
+		  <!-- END PANEL TITLE -->
 
+		  <!-- PANEL BODY -->
+		  <div class="panel-body">
+		  	<!-- NEW TRAIN FORM -->
+				<form role="form" id="train-form">
+					
+					<!-- TRAIN NAME FIELD -->
 					<div class="form-group">
 						<label>Train Name</label>
 						<input type="text" name="train-name" id="train-name" class="form-control" required>
 					</div>
+
+					<!-- DESTINATION FIELD -->
 					<div class="form-group">
 						<label>Destination</label>
 						<input type="text" name="destination" id="destination" class="form-control" required>
 					</div>
+
+					<!-- DEPART TIME FIELD -->
 					<div class="form-group">
 						<label>First Train Time (HH:MM - Specify AM or PM!... Thomas Knows Where You Sleep)</label>
 						<input type="time" name="train-time" id="train-time" class="form-control" required>
 					</div>
+
+					<!-- FREQUENCY FIELD -->
 					<div class="form-group">
 						<label>Frequency (MIN)</label>
 						<input type="number" name="frequency" id="frequency" class="form-control" required>
 					</div>
-
+					
+					<!-- SUBMIT BUTTON -->
 					<button type="submit" class="btn btn-primary" id="submit">SUBMIT THAT ISH</button>
 
 				</form>
+				<!-- END NEW TRAIN FORM -->
 		  </div>
+		  <!-- END PANEL BODY -->
 		</div>
 	</div>
+	<!-- END PANEL -->
 
+	<!-- MARGIN -->
 	<div class="col-md-2"></div>
 </div>
+<!-- END NEW TRAIN FORM CONTAINER -->
 
-
+<!-- LINK TO JS -->
 <script type="text/javascript" src="assets/javascript/train.js"></script>
 </body>
 </html>
