@@ -24,3 +24,10 @@ h1 {
 	width: 100%;
 	height: auto;
 }
+
+
+/* SCHEDULE DISPLAY STYLES	*/
+th {
+	font-weight: bolder;
+	text-decoration: underline;
+}
