@@ -6,6 +6,7 @@ Here is an app designed to keep someone from missing the train. Any user can put
 - This first image displays what the user will see upon page load. There are some great nostalgic styling and desgin choices that went into this page.
 ![INTRO](assets/images/read_me/intro.png)
 
+- Below you can see some of the information the user can put into the form such as: Train Name, Destination, Time of the First Departure, and How often the Train comes.
 ![BOSTON FORM](assets/images/read_me/boston-form.png)
 
 ![BOSTON RESULTS](assets/images/read_me/boston-results.png)
