@@ -9,6 +9,7 @@ Here is an app designed to keep someone from missing the train. Any user can put
 - Below you can see some of the information the user can put into the form such as: Train Name, Destination, Time of the First Departure, and How often the Train comes.
 ![BOSTON FORM](assets/images/read_me/boston-form.png)
 
+- Here you can see the results of the info submitted through the form. On the Schedule Panel you can see that the Train's next arrival time and how many minutes away it is from arrival is calculated from the information the user provided.
 ![BOSTON RESULTS](assets/images/read_me/boston-results.png)
 
 ![DC RESULTS](assets/images/read_me/dc-results.png)
